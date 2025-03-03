@@ -592,8 +592,8 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
   display: -webkit-box;
-  line-clamp: 6;
-  -webkit-line-clamp: 6;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1443,8 +1443,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .experience-text {
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
   }
 
   /* experience modal */
