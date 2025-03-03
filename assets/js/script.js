@@ -16,8 +16,8 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// experience variables
+const experienceItem = document.querySelectorAll("[data-experience-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
@@ -28,30 +28,30 @@ const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const testimonialsModalFunc = function () {
+const experienceModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
 // add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+for (let i = 0; i < experienceItem.length; i++) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+  experienceItem[i].addEventListener("click", function () {
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    modalImg.src = this.querySelector("[data-experience-avatar]").src;
+    modalImg.alt = this.querySelector("[data-experience-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-experience-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-experience-text]").innerHTML;
 
-    testimonialsModalFunc();
+    experienceModalFunc();
 
   });
 
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+modalCloseBtn.addEventListener("click", experienceModalFunc);
+overlay.addEventListener("click", experienceModalFunc);
 
 
 
@@ -197,20 +197,20 @@ certificationsList.addEventListener('scroll', () => {
 });
 
 
-// Scroll dots for Testimonials Section
+// Scroll dots for Experience Section
 // Ensure you have a container for the dots in your HTML, for example:
 // <div class="testimonial-dots"></div>
-const testimonialsList = document.querySelector('.testimonials-list');
+const experienceList = document.querySelector('.experience-list');
 const testimonialDotsContainer = document.querySelector('.testimonial-dots');
-const testimonialsItems = document.querySelectorAll('.testimonials-item');
+const experienceItems = document.querySelectorAll('.experience-item');
 
-// Generate dots for Testimonials
-testimonialsItems.forEach((item, index) => {
+// Generate dots for Experience
+experienceItems.forEach((item, index) => {
   const dot = document.createElement('button');
   dot.classList.add('carousel-dot');
   if (index === 0) dot.classList.add('active'); // Activate the first dot by default
   dot.addEventListener('click', () => {
-    testimonialsList.scrollTo({
+    experienceList.scrollTo({
       left: item.offsetLeft,
       behavior: 'smooth'
     });
@@ -218,12 +218,12 @@ testimonialsItems.forEach((item, index) => {
   testimonialDotsContainer.appendChild(dot);
 });
 
-// Update active dot on scroll for Testimonials using the container's center
-testimonialsList.addEventListener('scroll', () => {
-  const containerCenter = testimonialsList.scrollLeft + (testimonialsList.clientWidth / 2);
+// Update active dot on scroll for Experience using the container's center
+experienceList.addEventListener('scroll', () => {
+  const containerCenter = experienceList.scrollLeft + (experienceList.clientWidth / 2);
   let activeIndex = 0;
   
-  testimonialsItems.forEach((item, index) => {
+  experienceItems.forEach((item, index) => {
     const itemStart = item.offsetLeft;
     const itemEnd = itemStart + item.offsetWidth;
     
