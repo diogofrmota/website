@@ -694,16 +694,23 @@ main {
   box-shadow: var(--shadow-2);
 }
 
+/* 
 .modal-img-wrapper ion-icon {
   display: block;
-  margin-top: 15px; /* Adjust the value to move it lower */
+  margin-top: 15px;
+  font-size: 40px;
+  color: var(--orange-yellow-crayola);
+}
+*/
+
+.modal-book-icon {
+  margin-top: 20px; /* Move it lower */
   font-size: 40px;
   color: var(--orange-yellow-crayola);
 }
 
-/* 
 .modal-img-wrapper > img { display: none; }
-*/
+
 
 .modal-title { margin-bottom: 4px; }
 
