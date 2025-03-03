@@ -169,9 +169,9 @@ certificationsItems.forEach((item, index) => {
   dot.classList.add('carousel-dot');
   if (index === 0) dot.classList.add('active'); // Activate the first dot by default
   dot.addEventListener('click', () => {
-    // Scroll to the corresponding certification item
+    // Scroll to the corresponding certification item without subtracting container offset
     certificationsList.scrollTo({
-      left: item.offsetLeft - certificationsList.offsetLeft,
+      left: item.offsetLeft,
       behavior: 'smooth'
     });
   });
