@@ -167,9 +167,11 @@ const certificationsItems = document.querySelectorAll('.certifications-item');
 certificationsItems.forEach((item, index) => {
     const dot = document.createElement('button');
     dot.classList.add('carousel-dot');
+    if (index === 0) dot.classList.add('active'); // Activate the first dot by default
     dot.addEventListener('click', () => {
+        // Scroll to the corresponding certification item
         certificationsList.scrollTo({
-            left: item.offsetLeft,
+            left: item.offsetLeft - certificationsList.offsetLeft,
             behavior: 'smooth'
         });
     });
@@ -178,13 +180,24 @@ certificationsItems.forEach((item, index) => {
 
 // Update active dot on scroll
 certificationsList.addEventListener('scroll', () => {
-    const scrollPosition = certificationsList.scrollLeft;
+    const scrollPosition = certificationsList.scrollLeft + certificationsList.offsetLeft;
+    const maxScroll = certificationsList.scrollWidth - certificationsList.clientWidth;
+
     certificationsItems.forEach((item, index) => {
         const dot = carouselDots.children[index];
-        if (item.offsetLeft <= scrollPosition && item.offsetLeft + item.offsetWidth > scrollPosition) {
+        const itemStart = item.offsetLeft;
+        const itemEnd = itemStart + item.offsetWidth;
+
+        // Check if the item is in view
+        if (scrollPosition >= itemStart && scrollPosition < itemEnd) {
             dot.classList.add('active');
         } else {
             dot.classList.remove('active');
+        }
+
+        // Handle the last dot
+        if (scrollPosition >= maxScroll && index === certificationsItems.length - 1) {
+            dot.classList.add('active');
         }
     });
 });
