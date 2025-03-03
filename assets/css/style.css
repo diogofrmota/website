@@ -1471,6 +1471,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .certifications-item { min-width: calc(33.33% - 35px); }
 
+  /* Testing Feature */
+  .scroll-hint {
+    color: var(--light-gray-70);
+    font-size: var(--fs-6);
+    text-align: right;
+    margin-bottom: 10px;
+}
+
 
 
   /**
