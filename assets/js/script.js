@@ -158,18 +158,17 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// Scroll dots - Updated Version
+// Scroll dots for Certifications Section
 const certificationsList = document.querySelector('.certifications-list');
 const carouselDots = document.querySelector('.carousel-dots');
 const certificationsItems = document.querySelectorAll('.certifications-item');
 
-// Generate dots based on the number of items
+// Generate dots for Certifications
 certificationsItems.forEach((item, index) => {
   const dot = document.createElement('button');
   dot.classList.add('carousel-dot');
   if (index === 0) dot.classList.add('active'); // Activate the first dot by default
   dot.addEventListener('click', () => {
-    // Scroll to the corresponding certification item without subtracting container offset
     certificationsList.scrollTo({
       left: item.offsetLeft,
       behavior: 'smooth'
@@ -178,13 +177,11 @@ certificationsItems.forEach((item, index) => {
   carouselDots.appendChild(dot);
 });
 
-// Update active dot on scroll using the container's center
+// Update active dot on scroll for Certifications using the container's center
 certificationsList.addEventListener('scroll', () => {
-  // Calculate the horizontal center of the container
   const containerCenter = certificationsList.scrollLeft + (certificationsList.clientWidth / 2);
   let activeIndex = 0;
   
-  // Loop through each certification item and check if the container center falls within the item's boundaries
   certificationsItems.forEach((item, index) => {
     const itemStart = item.offsetLeft;
     const itemEnd = itemStart + item.offsetWidth;
@@ -194,8 +191,48 @@ certificationsList.addEventListener('scroll', () => {
     }
   });
   
-  // Update the dots: remove 'active' from all and add it to the one corresponding to activeIndex
   Array.from(carouselDots.children).forEach((dot, index) => {
+    dot.classList.toggle('active', index === activeIndex);
+  });
+});
+
+
+// Scroll dots for Testimonials Section
+// Ensure you have a container for the dots in your HTML, for example:
+// <div class="testimonial-dots"></div>
+const testimonialsList = document.querySelector('.testimonials-list');
+const testimonialDotsContainer = document.querySelector('.testimonial-dots');
+const testimonialsItems = document.querySelectorAll('.testimonials-item');
+
+// Generate dots for Testimonials
+testimonialsItems.forEach((item, index) => {
+  const dot = document.createElement('button');
+  dot.classList.add('carousel-dot');
+  if (index === 0) dot.classList.add('active'); // Activate the first dot by default
+  dot.addEventListener('click', () => {
+    testimonialsList.scrollTo({
+      left: item.offsetLeft,
+      behavior: 'smooth'
+    });
+  });
+  testimonialDotsContainer.appendChild(dot);
+});
+
+// Update active dot on scroll for Testimonials using the container's center
+testimonialsList.addEventListener('scroll', () => {
+  const containerCenter = testimonialsList.scrollLeft + (testimonialsList.clientWidth / 2);
+  let activeIndex = 0;
+  
+  testimonialsItems.forEach((item, index) => {
+    const itemStart = item.offsetLeft;
+    const itemEnd = itemStart + item.offsetWidth;
+    
+    if (containerCenter >= itemStart && containerCenter <= itemEnd) {
+      activeIndex = index;
+    }
+  });
+  
+  Array.from(testimonialDotsContainer.children).forEach((dot, index) => {
     dot.classList.toggle('active', index === activeIndex);
   });
 });
