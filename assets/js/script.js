@@ -158,46 +158,44 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// Scroll dots - Testing
+// Scroll dots - Updated Version
 const certificationsList = document.querySelector('.certifications-list');
 const carouselDots = document.querySelector('.carousel-dots');
 const certificationsItems = document.querySelectorAll('.certifications-item');
 
 // Generate dots based on the number of items
 certificationsItems.forEach((item, index) => {
-    const dot = document.createElement('button');
-    dot.classList.add('carousel-dot');
-    if (index === 0) dot.classList.add('active'); // Activate the first dot by default
-    dot.addEventListener('click', () => {
-        // Scroll to the corresponding certification item
-        certificationsList.scrollTo({
-            left: item.offsetLeft - certificationsList.offsetLeft, // Adjust for container offset
-            behavior: 'smooth'
-        });
+  const dot = document.createElement('button');
+  dot.classList.add('carousel-dot');
+  if (index === 0) dot.classList.add('active'); // Activate the first dot by default
+  dot.addEventListener('click', () => {
+    // Scroll to the corresponding certification item
+    certificationsList.scrollTo({
+      left: item.offsetLeft - certificationsList.offsetLeft,
+      behavior: 'smooth'
     });
-    carouselDots.appendChild(dot);
+  });
+  carouselDots.appendChild(dot);
 });
 
-// Update active dot on scroll
+// Update active dot on scroll using the container's center
 certificationsList.addEventListener('scroll', () => {
-    const scrollPosition = certificationsList.scrollLeft + certificationsList.offsetLeft;
-    const maxScroll = certificationsList.scrollWidth - certificationsList.clientWidth;
-
-    certificationsItems.forEach((item, index) => {
-        const dot = carouselDots.children[index];
-        const itemStart = item.offsetLeft;
-        const itemEnd = itemStart + item.offsetWidth;
-
-        // Check if the item is in view
-        if (scrollPosition >= itemStart && scrollPosition < itemEnd) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
-
-        // Handle the last dot
-        if (scrollPosition >= maxScroll && index === certificationsItems.length - 1) {
-            dot.classList.add('active');
-        }
-    });
+  // Calculate the horizontal center of the container
+  const containerCenter = certificationsList.scrollLeft + (certificationsList.clientWidth / 2);
+  let activeIndex = 0;
+  
+  // Loop through each certification item and check if the container center falls within the item's boundaries
+  certificationsItems.forEach((item, index) => {
+    const itemStart = item.offsetLeft;
+    const itemEnd = itemStart + item.offsetWidth;
+    
+    if (containerCenter >= itemStart && containerCenter <= itemEnd) {
+      activeIndex = index;
+    }
+  });
+  
+  // Update the dots: remove 'active' from all and add it to the one corresponding to activeIndex
+  Array.from(carouselDots.children).forEach((dot, index) => {
+    dot.classList.toggle('active', index === activeIndex);
+  });
 });
