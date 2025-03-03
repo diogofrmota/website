@@ -735,18 +735,20 @@ main {
 
 .certifications-item {
   flex: 0 0 auto; /* Prevent flex items from shrinking/growing */
-  width: 200px; /* Set a fixed width for each item */
-  margin-right: 20px; /* Add spacing between items */
+  width: 100px; /* Reduced from 200px to 100px */
+  margin-right: 10px; /* Adjusted spacing between items */
   scroll-snap-align: start; /* Ensure items snap into place */
 }
 
 .certifications-item img {
   width: 100%;
-  filter: grayscale(1);
+  filter: none; /* Remove grayscale filter to display logos in color */
   transition: var(--transition-1);
 }
 
-.certifications-item img:hover { filter: grayscale(0); }
+.certifications-item img:hover {
+  filter: none; /* Keep logos in color on hover */
+}
 
 
 
