@@ -2,14 +2,14 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Diogo Mota
+Diogo Mota
+DevOps Engineer
 
 Show Contacts
 
 Email
-richard@example.com
+diogofrmota@gmail.com
 
 Phone
 +1 (213) 352-2795
@@ -18,7 +18,7 @@ Birthday
 June 23, 1982
 
 Location
-Sacramento, California, USA
+Lisbon, PT
 
 # navbar
 
@@ -32,9 +32,9 @@ Contact
 
 About me
 
-I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
+A technology consultant with experience working in multiple domains, including insurance, banking and the IT sector. Solid understanding in a wide range of cloud technologies and tools, including AWS and Azure, DevOps tools, integration tools, databases, and version control systems.
 
-My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.
+My key technical skills and competencies include AWS, Azure, Kubernetes, Docker, Terraform, Ansible, Git, Python, JavaScript, SQL, PowerShell and Bash.
 
 
 ## service
@@ -93,17 +93,13 @@ Resume
 
 Education
 
-University school of the arts
-2007 — 2008
-Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
+NOVA School of Science and Technology
+2017 — 2023
+Integrated Master in Industrial Engineering and Management
 
-New york academy of art
-2006 — 2007
-Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..
-
-High school of art and design
-2002 — 2004
-Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.
+Ecole Nationale Supérieure en Génie des Systèmes et de l'Innovation
+2021 — 2022
+Erasmus+ Program
 
 Experience
 
