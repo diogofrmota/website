@@ -582,7 +582,12 @@ main {
   box-shadow: var(--shadow-1);
 }
 
-.experience-item-title { margin-bottom: 7px; }
+.experience-item-title { 
+  margin-bottom: 7px; 
+  white-space: nowrap;  /* Prevents text from wrapping */
+  overflow: hidden;      /* Hides overflowing text */
+  text-overflow: ellipsis; /* Adds '...' to cut-off text */
+}
 
 .experience-text {
   color: var(--light-gray);
