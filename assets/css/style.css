@@ -586,6 +586,16 @@ main {
   margin-bottom: 7px; 
 }
 
+
+.experience-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  max-height: 64px;
+  overflow: hidden;
+}
+/*
 .experience-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
@@ -597,7 +607,7 @@ main {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
+*/
 
 /**
  * #experience-modal
@@ -694,14 +704,11 @@ main {
   box-shadow: var(--shadow-2);
 }
 
-/* 
-.modal-img-wrapper ion-icon {
-  display: block;
-  margin-top: 15px;
-  font-size: 40px;
-  color: var(--orange-yellow-crayola);
+@media (max-width: 768px) { /* Adjust breakpoint if needed */
+  .modal-book-icon {
+    display: none !important; /* Hide on mobile */
+  }
 }
-*/
 
 .modal-book-icon {
   margin-top: 20px; /* Move it lower */
