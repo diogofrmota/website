@@ -157,3 +157,34 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Scroll dots - Testing
+const certificationsList = document.querySelector('.certifications-list');
+const carouselDots = document.querySelector('.carousel-dots');
+const certificationsItems = document.querySelectorAll('.certifications-item');
+
+// Generate dots based on the number of items
+certificationsItems.forEach((item, index) => {
+    const dot = document.createElement('button');
+    dot.classList.add('carousel-dot');
+    dot.addEventListener('click', () => {
+        certificationsList.scrollTo({
+            left: item.offsetLeft,
+            behavior: 'smooth'
+        });
+    });
+    carouselDots.appendChild(dot);
+});
+
+// Update active dot on scroll
+certificationsList.addEventListener('scroll', () => {
+    const scrollPosition = certificationsList.scrollLeft;
+    certificationsItems.forEach((item, index) => {
+        const dot = carouselDots.children[index];
+        if (item.offsetLeft <= scrollPosition && item.offsetLeft + item.offsetWidth > scrollPosition) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+});

@@ -1471,14 +1471,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .certifications-item { min-width: calc(33.33% - 35px); }
 
-  /* Testing Feature */
-  .scroll-hint {
-    color: var(--light-gray-70);
-    font-size: var(--fs-6);
-    text-align: right;
-    margin-bottom: 10px;
-}
-
 
 
   /**
@@ -1876,4 +1868,29 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/**
+	 * Scrolling Dots - Testing
+	 */
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--light-gray-70);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: var(--orange-yellow-crayola);
 }
