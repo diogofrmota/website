@@ -199,9 +199,9 @@ certificationsList.addEventListener('scroll', () => {
 
 // Scroll dots for Experience Section
 // Ensure you have a container for the dots in your HTML, for example:
-// <div class="testimonial-dots"></div>
+// <div class="experience-dots"></div>
 const experienceList = document.querySelector('.experience-list');
-const testimonialDotsContainer = document.querySelector('.testimonial-dots');
+const experience-DotsContainer = document.querySelector('.experience-dots');
 const experienceItems = document.querySelectorAll('.experience-item');
 
 // Generate dots for Experience
@@ -215,7 +215,7 @@ experienceItems.forEach((item, index) => {
       behavior: 'smooth'
     });
   });
-  testimonialDotsContainer.appendChild(dot);
+  experience-DotsContainer.appendChild(dot);
 });
 
 // Update active dot on scroll for Experience using the container's center
@@ -232,7 +232,7 @@ experienceList.addEventListener('scroll', () => {
     }
   });
   
-  Array.from(testimonialDotsContainer.children).forEach((dot, index) => {
+  Array.from(experience-DotsContainer.children).forEach((dot, index) => {
     dot.classList.toggle('active', index === activeIndex);
   });
 });
