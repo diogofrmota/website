@@ -171,7 +171,7 @@ certificationsItems.forEach((item, index) => {
     dot.addEventListener('click', () => {
         // Scroll to the corresponding certification item
         certificationsList.scrollTo({
-            left: item.offsetLeft - certificationsList.offsetLeft,
+            left: item.offsetLeft - certificationsList.offsetLeft, // Adjust for container offset
             behavior: 'smooth'
         });
     });

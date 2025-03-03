@@ -728,13 +728,16 @@ main {
   overflow-x: auto;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
+  scroll-snap-type: x mandatory;
   scroll-padding-inline: 25px;
+  width: 100%;
 }
 
 .certifications-item {
-  min-width: 50%;
-  scroll-snap-align: start;
+  flex: 0 0 auto; /* Prevent flex items from shrinking/growing */
+  width: 200px; /* Set a fixed width for each item */
+  margin-right: 20px; /* Add spacing between items */
+  scroll-snap-align: start; /* Ensure items snap into place */
 }
 
 .certifications-item img {
