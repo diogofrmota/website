@@ -745,7 +745,7 @@ main {
   scroll-snap-type: x mandatory;
   scroll-padding-inline: 25px;
   width: 100%;
-  justify-content: center; /* UPDATE - was added */
+  justify-content: flex-start; /* UPDATE - was added */
 }
 
 .certifications-item {
