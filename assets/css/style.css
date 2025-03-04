@@ -755,7 +755,7 @@ main {
 }
 
 .certifications-item img {
-  width: 100%;
+  width: 70%;
   filter: none; /* Remove grayscale filter to display logos in color */
   transition: var(--transition-1);
 }
