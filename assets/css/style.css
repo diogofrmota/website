@@ -750,7 +750,9 @@ main {
 
 .certifications-item {
   flex: 0 0 auto; /* Prevent flex items from shrinking/growing */
-  width: 100px; /* Reduced from 200px to 100px */
+  width: auto; /* UPDATED - Allows it to take up required space */
+  min-width: 120px; /* UPDATED - Ensures proper spacing */ 
+  /* UPDATED - REMODED width: 100px; /* Reduced from 200px to 100px */
   margin-right: 10px; /* Adjusted spacing between items */
   scroll-snap-align: start; /* Ensure items snap into place */
   justify-content: center; /* UPDATE - was added */
@@ -759,6 +761,8 @@ main {
 
 .certifications-item img {
   width: 85%;
+  max-height: 100px; /* UPDATE - Ensures uniform height */
+  object-fit: contain; /* UPDATE - Prevents distortion */
   filter: none; /* Remove grayscale filter to display logos in color */
   transition: var(--transition-1);
 }
@@ -768,10 +772,13 @@ main {
 }
 
 .certification-box { /* UPDATE - was added */
-  display: flex; /* UPDATE - was added */
-  flex-direction: column; /* UPDATE - was added */
-  align-items: center; /* UPDATE - was added */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensures both image and text are centered */
+  text-align: center;
 }
+
 
 
 
