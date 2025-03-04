@@ -246,7 +246,7 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar {
   width: 10px; /* for vertical scrollbar */  /* UPDATED WAS 5px */
-  height: 5px; /* for horizontal scrollbar */
+  height: 10px; /* for horizontal scrollbar */ /* UPDATED WAS 5px */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -255,7 +255,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+  background: var(--vegas-gold); /* UPDATED WAS background: var(--orange-yellow-crayola); */
   border-radius: 5px;
 }
 
