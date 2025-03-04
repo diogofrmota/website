@@ -1867,8 +1867,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     text-overflow: ellipsis;
   }
 
+  /* Specifically allow full email visibility */
+  .contact-info .contact-link[href^="mailto:"] {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-wrap: break-word;
+  }
+  
   .contact-info :is(.contact-link, time, address) {
-    --fs-7: 12px;
+    --fs-7: 12px;  /* Change back to 14px if needed */
     font-weight: var(--fw-300);
   }
 
