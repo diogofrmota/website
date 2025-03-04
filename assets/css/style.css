@@ -245,8 +245,8 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 8px; /* for vertical scrollbar */  /* UPDATED WAS 5px */
-  height: 8px; /* for horizontal scrollbar */ /* UPDATED WAS 5px */
+  width: 8px; /* for vertical scrollbar */
+  height: 8px; /* for horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -775,8 +775,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Ensures both image and text are centered */
-  text-align: center;
 }
 
 
@@ -1981,7 +1979,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Certification names */
 .certification-name {
   font-size: 14px;
-  color: var(--white-2); /* UPDATE - was grey */
+  color: var(--white-2);
   text-align: center;
   margin-top: 8px;
 }
