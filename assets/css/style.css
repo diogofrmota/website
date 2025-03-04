@@ -1976,3 +1976,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   text-align: center;
   margin-top: 8px;
 }
+
+/* UPDATE - experience dates */
+.experience-text time {
+  font-weight: bold;
+  color: var(--light-gray-70); /* Matches existing theme */
+  display: block;
+  margin-bottom: 5px; /* Adds spacing */
+}
