@@ -236,3 +236,28 @@ experienceList.addEventListener('scroll', () => {
     dot.classList.toggle('active', index === activeIndex);
   });
 });
+
+// Handle form submission with Formspree
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  let formData = new FormData(this);
+
+  fetch("https://formspree.io/f/xqaeroby", {
+    method: "POST",
+    body: formData,
+    headers: { "Accept": "application/json" }
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.ok) {
+      alert("Message sent successfully!");
+      this.reset();
+    } else {
+      alert("Error sending message. Please try again.");
+    }
+  })
+  .catch(error => {
+    alert("Network error. Please check your connection and try again.");
+  });
+});
