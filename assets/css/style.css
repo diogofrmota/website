@@ -255,7 +255,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--vegas-gold); /* UPDATED WAS background: var(--orange-yellow-crayola); */
+  background: var(--orange-yellow-crayola);
   border-radius: 5px;
 }
 
@@ -1947,4 +1947,27 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .carousel-dot.active {
   background: var(--orange-yellow-crayola);
+}
+
+
+/* Centered images on the What I'm doing section */
+@media (max-width: 768px) {
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-icon-box {
+    margin: 0 auto;
+  }
+}
+
+/* Certification names */
+.certification-name {
+  font-size: 14px;
+  color: var(--light-gray);
+  text-align: center;
+  margin-top: 8px;
 }
