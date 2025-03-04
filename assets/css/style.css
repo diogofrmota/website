@@ -1869,10 +1869,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* Specifically allow full email visibility */
   .contact-info .contact-link[href^="mailto:"] {
-    white-space: normal;
+    white-space: nowrap;
     overflow: visible;
     text-overflow: unset;
-    word-wrap: break-word;
   }
   
   .contact-info :is(.contact-link, time, address) {
