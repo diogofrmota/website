@@ -885,7 +885,7 @@ main {
 
 
 /*-----------------------------------*\
-  #PORTFOLIO
+  #SKILLS
 \*-----------------------------------*/
 
 .filter-list { display: none; }
@@ -1257,7 +1257,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG 
+   * #SKILLS, BLOG 
    */
 
   .project-img,
@@ -1516,7 +1516,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG
+   * #SKILLS, BLOG
    */
 
   .project-img, .blog-banner-box { border-radius: 16px; }
@@ -1609,7 +1609,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * PORTFOLIO
+   * SKILLS
    */
 
   .article-title { padding-bottom: 20px; }
@@ -1635,7 +1635,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-  /* portfolio and blog grid */
+  /* skills and blog grid */
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
@@ -1754,7 +1754,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * PORTFOLIO
+   * SKILLS
    */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
