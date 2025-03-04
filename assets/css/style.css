@@ -745,6 +745,7 @@ main {
   scroll-snap-type: x mandatory;
   scroll-padding-inline: 25px;
   width: 100%;
+  justify-content: center; /* UPDATE - was added */
 }
 
 .certifications-item {
@@ -752,6 +753,8 @@ main {
   width: 100px; /* Reduced from 200px to 100px */
   margin-right: 10px; /* Adjusted spacing between items */
   scroll-snap-align: start; /* Ensure items snap into place */
+  justify-content: center; /* UPDATE - was added */
+  text-align: center; /* UPDATE - was added */
 }
 
 .certifications-item img {
@@ -764,7 +767,11 @@ main {
   filter: none; /* Keep logos in color on hover */
 }
 
-
+.certification-box { /* UPDATE - was added */
+  display: flex; /* UPDATE - was added */
+  flex-direction: column; /* UPDATE - was added */
+  align-items: center; /* UPDATE - was added */
+}
 
 
 
@@ -1967,7 +1974,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Certification names */
 .certification-name {
   font-size: 14px;
-  color: var(--light-gray);
+  color: var(--white-2); /* UPDATE - was grey */
   text-align: center;
   margin-top: 8px;
 }
