@@ -245,8 +245,8 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 10px; /* for vertical scrollbar */  /* UPDATED WAS 5px */
-  height: 10px; /* for horizontal scrollbar */ /* UPDATED WAS 5px */
+  width: 8px; /* for vertical scrollbar */  /* UPDATED WAS 5px */
+  height: 8px; /* for horizontal scrollbar */ /* UPDATED WAS 5px */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
