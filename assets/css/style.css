@@ -947,14 +947,14 @@ main {
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 logos per row on mobile */
+  grid-template-columns: repeat(2, 1fr); /* 2 logos per row on mobile */
   gap: 30px;
   margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
   .project-list {
-    grid-template-columns: repeat(5, 1fr); /* 5 logos per row on web */
+    grid-template-columns: repeat(4, 1fr); /* 4 logos per row on web */
   }
 }
 
