@@ -988,10 +988,15 @@ main {
 
 .project-img {
   position: relative;
+  width: 150px; /* UPDATE - ADDED */
+  height: 150px; /* UPDATE - ADDED */
+  /*
   width: 100%;
-  height: 200px;
+  height: 200px; */
   border-radius: 16px;
-  overflow: hidden;
+  overflow: hidden; /* UPDATE - ADDED */
+  /*
+  overflow: hidden; */
   margin-bottom: 15px;
 }
 
