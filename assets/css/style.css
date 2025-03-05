@@ -842,6 +842,10 @@ main {
   line-height: 1.6;
 }
 
+.timeline-school {
+  color: inherit;
+  font-family: inherit;
+}
 
 /**
  * skills 
