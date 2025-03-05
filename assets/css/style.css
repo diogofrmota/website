@@ -840,6 +840,8 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  list-style-type: disc;  /* Ensures bullet points are used */
+  padding-left: 1em;  /* Adds space so the bullets are visible */
 }
 
 .timeline-school {
