@@ -1999,8 +1999,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* UPDATE - experience dates */
 .experience-text time {
-  font-weight: bold;
-  color: var(--light-gray-70); /* Matches existing theme */
+  font-weight: var(--fw-400);
+  color: var(--vegas-gold);
   display: block;
   margin-bottom: 5px; /* Adds spacing */
+  font-size: var(--fs-7);
 }
