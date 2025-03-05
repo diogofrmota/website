@@ -968,7 +968,7 @@ main {
 
 @media (min-width: 768px) {
   .project-list {
-    grid-template-columns: repeat(3, 1fr); /* 3 logos per row on web */
+    grid-template-columns: repeat(4, 1fr); /* 4 logos per row on web */
   }
 }
 
