@@ -755,7 +755,11 @@ main {
 }
 
 .certifications-item img {
-  width: 85%;
+  width: 100px; /* Set fixed width */
+  height: 100px; /* Set fixed height */
+  object-fit: contain; /* Ensure images maintain aspect ratio */
+  display: block;
+  margin: auto;
   filter: none; /* Remove grayscale filter to display logos in color */
   transition: var(--transition-1);
 }
